@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="py-5 d-flex justify-content-center">
+        <div class="card my-5 col-6  bg-white">
+            <form class="form" #registerForm="ngForm" (ngSubmit)="registerForm.valid && onSubmit()" novalidate>
+                <div class="card-header bg-dark">
+                    <h3 class="text-center text-light">Sign In</h3>
+                </div>
+                <div class="card-body py-5">
+                    <div class="input-group form-group pt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="text" [(ngModel)]="signup.userName" class="form-control" id="username" #username="ngModel" required name="username"  placeholder="Username">
+                    </div>
+                    <span class="text-danger" *ngIf="(username.touched || registerForm.submitted) && username.errors?.required">
+                        required
+                    </span>
+                    <div class="input-group form-group pt-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input type="password"#password="ngModel" required [(ngModel)]="signup.password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+                    <span class="text-danger" *ngIf="(username.touched || registerForm.submitted) && username.errors?.required">
+                            required
+                        </span>
+                    <div class="form-group">
+                        <div class="d-flex justify-content-end  pt-5">
+                            <button type="submit" class="btn btn-primary " >LOG IN</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            
+
+        </div>
+    </div>
+    <div class="">
+            <button type="submit" class="btn btn-primary " [routerLink]="['/WarehouseComponent']">LOG IN</button>
+        </div>
+</div>
+<!-- http://101.53.155.156/auth/login -->

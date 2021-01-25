@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "warehouse"
+  "defaultProject": "warehouse",
+  "cli": {
+    "analytics": "9d8bc8b9-7d6c-4e53-975a-2928d25673f3"
+  }
 }
