@@ -32,7 +32,7 @@ export class WarehouseComponent implements OnInit {
     console.log(error);
     })
     
-    
+    this.submit();
   }
   submit(){
     console.log(this.CatagoryObj);
