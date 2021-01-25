@@ -36,7 +36,7 @@ export class WarehouseComponent implements OnInit {
   }
   submit(){
     console.log(this.CatagoryObj);
-    this.CatagoryObj.countryObj = {'id':"0d630ef7-b613-4417-9035-6b71b467373a"};
+    this.CatagoryObj.countryObj = {'id':"184f3d5e-757a-433b-b6c0-8065017980ad"};
 
     this.LoginService.addCreate(this.CatagoryObj).subscribe(res => {
       console.log(res);
